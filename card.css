@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  animation: fadein 2.5s;
+}
+
+body {
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+  background-image: url("./resources/pattern-with-watercolor-flowers-vintage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#container {
+  border: solid 3px rgb(9, 10, 54);
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+  box-shadow: 10px 10px 100px black, 5px 5px 100px black inset;
+  animation: zoom 2s ease-in-out, float 6s infinite ease-in-out !important;
+}
+
+h2 {
+  color: rgb(9, 10, 54);
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.underline {
+  border-bottom: solid 2px white;
+  margin: -0.512em auto;
+  width: 80px;
+  padding-top: 15px;
+}
+
+.bear {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+p {
+  padding: 25px;
+  text-align: justify;
+  color: rgb(9, 10, 54);
+  line-height: 30px;
+}
+
+img {
+  transform: translateY(3px);
+}
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .underline {
+    width: 68px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+
+  .underline {
+    width: 53px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(5px) rotateY(2deg);
+  }
+  50% {
+    transform: translatey(-25px) rotateY(2deg);
+  }
+  100% {
+    transform: translatey(5px) rotateY(2deg);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    scale: 0;
+    transform: rotateY(2deg);
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    transform: rotateY(2deg);
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0.6;
+    filter: blur(50px);
+  }
+  25% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.6;
+    filter: blur(80px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}

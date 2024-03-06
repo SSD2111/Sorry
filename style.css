@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0px;
+  font-family: "Rajdhani", sans-serif;
+  overflow-x: hidden;
+  text-transform: uppercase;
+  background-image: url("./resources/background-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+}
+
+.open-button {
+  margin-top: 20px;
+  height: 20px;
+  margin-left: 5px;
+  padding: 5px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 0.3s;
+  background-color: #ffa600d8;
+  border: 2px solid #ffa6008e;
+}
+
+.open-button:hover {
+  scale: 1.05;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #ffa600;
+  box-shadow: 2px 2px 20px #1f1f1f;
+}
+
+.letter-image {
+  position: absolute;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 55vh;
+}
+
+.animated-mail {
+  position: absolute;
+  height: 250px;
+  width: 200px;
+  transition: 0.4s;
+  transform: translateX(-50px);
+}
+
+.animated-mail .body1 {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 200px;
+  border-color: transparent transparent #1f1f1f transparent;
+  z-index: 2;
+}
+
+.animated-mail .top-fold {
+  position: absolute;
+  top: 150px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 100px 0 100px;
+  transform-origin: 50% 0%;
+  transition: transform 0.4s 0.4s, z-index 0.2s 0.4s;
+  border-color: #ffa600d8 transparent transparent transparent;
+  z-index: 2;
+}
+
+.animated-mail .back-fold {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 100px;
+  background: #ffd700;
+  z-index: 0;
+}
+
+.animated-mail .left-fold {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 50px 0 50px 100px;
+  border-color: transparent transparent transparent #303030;
+  z-index: 2;
+}
+
+.animated-mail .letter {
+  left: 20px;
+  bottom: 0px;
+  position: absolute;
+  width: 160px;
+  height: 60px;
+  background: white;
+  z-index: 1;
+  overflow: hidden;
+
+  transition: 0.4s 0.2s;
+}
+
+.animated-mail .letter .letter-border {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffa600d8,
+    #ffa600d8 8px,
+    transparent 8px,
+    transparent 18px
+  );
+}
+
+.animated-mail .letter .letter-stamp {
+  margin-top: 30px;
+  margin-left: 120px;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  background: #f9ed32;
+}
+
+.letter-image:hover .animated-mail {
+  transform: translate(-50px, 30px);
+}
+
+.letter-image:hover .animated-mail .top-fold {
+  transition: transform 0.4s, z-index 0.2s;
+  transform: rotateX(180deg);
+  -webkit-transition: transform 0.4s, z-index 0.2s;
+  -webkit-transform: rotateX(180deg);
+  -moz-transition: transform 0.4s, z-index 0.2s;
+  -moz-transform: rotateX(180deg);
+  z-index: 0;
+}
+.letter-image:hover .animated-mail .letter {
+  height: 180px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url("./resources/background-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .letter-image {
+    margin-top: 60vh;
+  }
+}
